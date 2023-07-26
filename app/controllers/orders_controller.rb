@@ -1,5 +1,4 @@
 class OrdersController < ApplicationController
-
   def index
     @orders = Order.OPEN
   end
@@ -11,4 +10,5 @@ class OrdersController < ApplicationController
       redirect_to request.referer
     end
   end
+
 end

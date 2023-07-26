@@ -4,7 +4,7 @@
   <div class="row">
     <div class="col-6">
       <p>ID: <%= order.uuid %></p>
-      <p>Created: <%= order.created_at.strftime('%B %-d, %Y %H:%M') %></p>
+      <p>Created: <%= display_datetime(order.created_at) %></p>
       <p>Promotion Codes: <%= order.promotion_codes %></p>
       <p>Discount Codes: <%= order.discount_code %></p>
       <p>Total Price: <%= price_in_euros(order.total_price) %></p>
