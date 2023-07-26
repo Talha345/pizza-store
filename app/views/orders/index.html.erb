@@ -1,0 +1,40 @@
+<h1>Orders</h1>
+<hr>
+<% @orders.each do |order| %>
+  <div class="row">
+    <div class="col-6">
+      <p>ID: <%= order.uuid %></p>
+      <p>Created: <%= order.created_at.strftime('%B %-d, %Y %H:%M') %></p>
+      <p>Promotion Codes: <%= order.promotion_codes %></p>
+      <p>Discount Codes: <%= order.discount_code %></p>
+      <p>Total Price: <%= price_in_euros(order.total_price) %></p>
+      <p>
+        <%= button_to 'Complete', order_path(order.uuid), { method: :patch } %>
+      </p>
+    </div>
+    <div class="col-6">
+      <p>Items</p>
+      <ul>
+        <% order.order_items.each do |order_item| %>
+          <li>
+            <%= order_item.name %> (<%= order_item.size %>)
+            <% if order_item.add.present? %>
+              <ul>
+                <li>
+                  Add: <%= order_item.added_ingredients.pluck(:name).join(", ") %></li>
+              </ul>
+            <% end %>
+            <% if order_item.remove.present? %>
+              <ul>
+                <li>
+                  Remove: <%= order_item.removed_ingredients.pluck(:name).join(", ") %></li>
+              </ul>
+            <% end %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+  <hr>
+<% end %>
+

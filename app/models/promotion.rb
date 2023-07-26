@@ -1,5 +1,6 @@
 class Promotion < ApplicationRecord
 
+  has_and_belongs_to_many :orders
   belongs_to :target_pizza, class_name: 'Pizza', foreign_key: 'target_pizza_id'
   enum target_size: %w[Small Medium Large]
 
