@@ -8,6 +8,8 @@ class Order < ApplicationRecord
   has_and_belongs_to_many :promotions
   belongs_to :discount, optional: true
 
+  # Currently the order total is calculated on the fly in memory which is sufficient in our scenario but we can also persist
+  # this value in the DB by calculating it in an after_create/after_update callback depending on use case.
   def total_price
     apply_promotions
     sum = order_items_sum

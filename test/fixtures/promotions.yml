@@ -4,8 +4,12 @@
 # model remove the "{}" from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
-# column: value
-#
-two: {}
-# column: value
+2for1:
+  name: '2FOR1'
+  target_pizza: salami
+  target_size: "Small"
+  from: 2
+  to: 1
+
+
+

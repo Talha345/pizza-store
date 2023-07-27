@@ -1,7 +1,7 @@
 <h1>Orders</h1>
 <hr>
 <% @orders.each do |order| %>
-  <div class="row">
+  <div class="row order">
     <div class="col-6">
       <p>ID: <%= order.uuid %></p>
       <p>Created: <%= display_datetime(order.created_at) %></p>
