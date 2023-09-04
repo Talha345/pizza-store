@@ -1,0 +1,69 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+# This model initially had no columns defined. If you add columns to the
+# model remove the "{}" from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+one:
+  order: one
+  pizza: tonno
+  size: "Large"
+  add: []
+  remove: []
+
+two:
+  order: two
+  pizza: margherita
+  size: "Large"
+  add: [1, 2, 3]
+  remove: []
+
+three:
+  order: two
+  pizza: tonno
+  size: "Medium"
+  add: []
+  remove: [1, 3]
+
+four:
+  order: two
+  pizza: margherita
+  size: "Small"
+  add: []
+  remove: []
+
+five:
+  order: three
+  pizza: salami
+  size: "Medium"
+  add: [1]
+  remove: [2]
+
+six:
+  order: three
+  pizza: salami
+  size: "Small"
+  add: []
+  remove: []
+
+seven:
+  order: three
+  pizza: salami
+  size: "Small"
+  add: []
+  remove: []
+
+eight:
+  order: three
+  pizza: salami
+  size: "Small"
+  add: []
+  remove: []
+
+nine:
+  order: three
+  pizza: salami
+  size: "Small"
+  add: [3]
+  remove: []
+
