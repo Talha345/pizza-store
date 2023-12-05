@@ -1,4 +1,4 @@
- ## Evermood Rails Coding Challenge
+ ## Pizza Ordering System
 
 Please follow the following steps to setup and run the project.
 
